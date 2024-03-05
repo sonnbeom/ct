@@ -1,27 +1,19 @@
 import java.util.*;
 public class Main {
-    public static void main(String[]args){
-        boolean[] check = new boolean[10001];
-        for(int i = 1; i < 10001; i++){
-            int num = check(i);
-            if(num < 10001){
-                check[num] = true;
+    public static void main(String[]args) {
+        Scanner sc = new Scanner(System.in);
+        String n = sc.next();
+        int[] storage = new int[10];
+        for(int i = 0; i < n.length(); i++){
+            String s = n.substring(i,i+1);
+            int t = Integer.parseInt(s);
+            if(t == 9){
+                t = 6;
             }
+            storage[t]++;
         }
-        StringBuilder sb = new StringBuilder();
-        for(int i = 1; i < 10001; i++){
-            if(!check[i]){
-                sb.append(i).append("\n");
-            }
-        }
-        System.out.print(sb);
-    }
-    static int check(int i){
-        int num = i;
-        while(i != 0){
-            num += i%10;
-            i = i/10;
-        }
-        return num;
+        storage[6] = storage[6]/2 + storage[6]%2;
+        Arrays.sort(storage);
+        System.out.print(storage[9]);
     }
 }
