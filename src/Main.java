@@ -1,19 +1,29 @@
 import java.util.*;
 public class Main {
+    static int N;
+    static int K;
+    static boolean[] check;
+
     public static void main(String[]args) {
-        Scanner sc = new Scanner(System.in);
-        String n = sc.next();
-        int[] storage = new int[10];
-        for(int i = 0; i < n.length(); i++){
-            String s = n.substring(i,i+1);
-            int t = Integer.parseInt(s);
-            if(t == 9){
-                t = 6;
-            }
-            storage[t]++;
+       Scanner sc = new Scanner(System.in);
+       N = sc.nextInt();
+       K = sc.nextInt();
+       check = new boolean[N+1];
+       primeNumber();
+
+    }
+    static void primeNumber(){
+        for(int i = 2; i <= N; i++){
+           if(!check[i]){
+               for(int j = i; j <= N; j+=i){
+                   check[j] = true;
+                   K--;
+                   if(K == 0){
+                       System.out.print(j);
+                       return;
+                   }
+               }
+           }
         }
-        storage[6] = storage[6]/2 + storage[6]%2;
-        Arrays.sort(storage);
-        System.out.print(storage[9]);
     }
 }
