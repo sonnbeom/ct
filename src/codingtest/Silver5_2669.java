@@ -1,5 +1,8 @@
-import java.util.*;
-public class Main {
+package codingtest;
+
+import java.util.Scanner;
+
+public class Silver5_2669 {
     public static void main(String[]args) {
         Scanner sc = new Scanner(System.in);
         int[][] map = new int[101][101];
