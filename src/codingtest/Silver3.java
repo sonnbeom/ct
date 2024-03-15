@@ -1,2 +1,5 @@
-package codingtest;public class Silver3 {
+package codingtest;
+
+public class Silver3 {
+
 }
