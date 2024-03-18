@@ -5,6 +5,9 @@ public class Main {
         int i = 3;
         int t = 2;
         String st = "azzz";
+        i = 4;
+        i++;
+        System.out.println(i);
 
     }
 }
