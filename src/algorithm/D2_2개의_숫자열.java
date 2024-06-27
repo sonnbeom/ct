@@ -28,15 +28,7 @@ public class D2_2개의_숫자열 {
                 leng = n;
             }
             int max = 0;
-            for (int j = 0; j <= diff; j++) {
-                int temp = 0;
-                for (int k = 0; k <= leng; k++) {
-                    temp += arrFi[k] + arrSe[k];
-                }
-                if (max < temp){
-                    max = temp;
-                }
-            }
+
             System.out.println("#"+i+" "+max);
         }
     }
