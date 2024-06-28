@@ -18,18 +18,7 @@ public class D2_2개의_숫자열 {
             for (int j = 0; j < m; j++) {
                 arrSe[j] = sc.nextInt();
             }
-            int diff = 0;
-            int leng = 0;
-            if (n > m){
-                diff = n - m;
-                leng = m;
-            }else {
-                diff = m - n;
-                leng = n;
-            }
-            int max = 0;
 
-            System.out.println("#"+i+" "+max);
         }
     }
 }
